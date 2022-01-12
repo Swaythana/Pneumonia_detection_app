@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+
+<body>
+    <br>
+    <br>
+    <div class="box">
+    <h4 style="color: rgba(255, 255, 255, 0.849); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 22px;">
+    <li>This web application is based on a 2-layer convolutional neural network (CNN) architecture using batch normalization, trained to recognise pneumonia on chest x-rays.</li>
+    <br>
+    <li>This deep learning model has been trained and validated using the dataset which contains nearly 5000 images.</li>
+    <br>
+    <li>The neural network achieved accuracy exceeding 93% on the relevant test set of more than 500 x-rays.</li>
+    <br>
+    <li>The suitability of this deep learning model for clinical use has not been validated. Therefore it cannot be used for any clinical purpose.</li>
+    <br>
+    <li>It can be used for research purposes and for comparison with other similar models.</li>
+    <br>
+    <li>For contact details refer contact page</li>
+</h4>
+</div>
+</body>
+<style>
+    .box {
+            text-align: justify;
+            margin-top: 40px;
+            width: 630px;
+            height: 240px;
+            padding: 5px;
+            
+        }
+</style>
+{% endblock %}

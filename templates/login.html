@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}" />
+</head>
+
+<body>
+    <br>
+    <br>
+    <h2 id="heading" style="color:lightgray" ;>Login </h2>
+
+    <body bgcolor="cyan">
+        <script>
+            function validateForm() {
+                
+                var result = true;
+
+                var enteredUsername = document.getElementById("username").value;
+
+                var enteredPassword = document.getElementById("password").value;
+
+                var selectedoption = document.getElementById("loginas");
+
+                var patt = /[abc]/;
+
+                var pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+
+                if (enteredUsername=="") {
+                    result = false;
+                    alert("Enter the username");
+                }
+
+                if (enteredPassword=="") {
+                    result = false;
+                    alert("Enter the password");
+                }
+
+                if (!pattern.test(enteredPassword)) {
+                    result = false;
+                    alert("Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
+                }
+
+                if (selectedoption.selectedIndex == 0) {
+                    result = false;
+                    alert("Please select an option..");
+                }
+
+                return result;
+
+            }
+        </script>
+        <form action="upload" method="post" onsubmit="return validateForm()">
+            <center>
+                <div>
+                    <table style="margin-left:auto;margin-right:auto;">
+                        <center>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td class="al" style="color:lightgray"><label>Username </label></td>
+                                <td><input name="username" id="username" /><br></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><label class="al" style="color:lightgray">Password </label></td>
+                                <td><input type="password"  name="password" id="password" /></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><label class="al" style="color:lightgray">LoginAs </label></td>
+                                <td>
+                                    <select type="text"  name="loginas" id="loginas">
+                                        <option value=""></option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Patient">Patient</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="signup" style="color:rgba(246, 175, 255, 0.774)">New User? SignUp</a></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><button type="submit" id="login" class="btn btn-info">Login</button></td>
+                                <td><button type="reset" id="login" class="btn btn-info">Reset</button></td>
+                            </tr>
+                        </center>
+                    </table>
+                </div>
+            </center>
+        </form>
+
+    </body>
+    <style>
+        .al {
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+            width: 130px;
+        }
+
+        div {
+            text-align: left;
+            margin: 8px;
+            margin-left: 500px;
+            width: 500px;
+            height: 330px;
+            padding: 5px;
+            border: 1px solid rgb(62, 197, 238);
+            background: rgba(99, 64, 88, 0.5)
+        }
+
+        #loginas {
+            width: 185px;
+        }
+
+        #login {
+            margin-left: 50%;
+            width: 100px;
+            transform: translateX(-50%);
+            color: #fff;
+            background: #ff066eb4;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        #login:hover {
+            background: #f3408bb4;
+        }
+
+        #heading {
+            margin: 60px;
+            margin-left: 900px;
+        }
+    </style>
+</body>
+
+</html>

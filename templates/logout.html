@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Logout</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/logout.css') }}" />
+</head>
+<body bgcolor="#C0C0C0">
+<center>
+<form action="/">
+<br>
+<br>
+<br>
+<br>
+<h3 style="color:lightgray">Logged out Successfully</h3>
+<br>
+<center><button type="submit" id="login" class="btn btn-info">Login Again</button></center>
+</form>
+</center>
+</body>
+<style>
+	.al {
+		font-size: 18px;
+		font-family: 'Raleway', sans-serif;
+		width: 130px;
+	}
+
+	div {
+		text-align: left;
+		margin: 8px;
+		margin-left: 500px;
+		width: 500px;
+		height: 330px;
+		padding: 5px;
+		border: 1px solid rgb(62, 197, 238);
+		background: rgba(99, 64, 88, 0.5)
+	}
+
+	#loginas {
+		width: 185px;
+	}
+
+	#login {
+		margin-left: 8%;
+		width: 130px;
+		transform: translateX(-50%);
+		color: #fff;
+		background: #ff066eb4;
+		padding: 10px 20px;
+		font-size: 1em;
+		font-weight: 600;
+	}
+
+	#login:hover {
+		background: #f3408bb4;
+	}
+
+	#heading {
+		margin: 60px;
+		margin-left: 900px;
+	}
+</style>
+</html>
