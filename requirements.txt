@@ -1,3 +1,14 @@
+Werkzeug>=0.15.3
+Flask>=1.0.0
+numpy==1.14.2
+Keras==2.1.5
+gevent==1.2.2
+pillow>=6.2.0
+h5py==2.7.0
+tensorflow>=1.12.1
+gunicorn==>=19.5.0
+SQLAlchemy==1.4.28
+sqlparse==0.4.2
 # absl-py==0.11.0
 # altgraph==0.17
 # argon2-cffi==20.1.0
@@ -132,21 +143,21 @@
 # testpath==0.4.4
 # threadpoolctl==2.1.0
 # tifffile==2020.10.1
-torch==1.10.1
-torchaudio==0.10.1
-torchvision==0.11.2
-tornado==6.1
-tqdm==4.61.0
-traitlets==5.0.5
-typing-extensions==3.7.4.3
-urllib3==1.26.2
-virtualenv==20.10.0
-virtualenv-clone==0.5.7
-wcwidth==0.2.5
-webencodings==0.5.1
-Werkzeug==2.0.2
-whichcraft==0.6.1
-wrapt==1.12.1
-zipp==3.4.0
-zope.event==4.5.0
-zope.interface==5.2.0
+# torch==1.10.1
+# torchaudio==0.10.1
+# torchvision==0.11.2
+# tornado==6.1
+# tqdm==4.61.0
+# traitlets==5.0.5
+# typing-extensions==3.7.4.3
+# urllib3==1.26.2
+# virtualenv==20.10.0
+# virtualenv-clone==0.5.7
+# wcwidth==0.2.5
+# webencodings==0.5.1
+# Werkzeug==2.0.2
+# whichcraft==0.6.1
+# wrapt==1.12.1
+# zipp==3.4.0
+# zope.event==4.5.0
+# zope.interface==5.2.0
