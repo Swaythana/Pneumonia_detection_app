@@ -1,7 +1,7 @@
 from flask import Flask,flash, sessions
 from flask_sqlalchemy import SQLAlchemy
-
-
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from flask import Flask, render_template
 # from __future__ import division, print_function
 
@@ -30,6 +30,8 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
+admin=Admin(app)
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20),nullable=False)
@@ -43,6 +45,8 @@ class User(db.Model):
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
+
+admin.add_view(ModelView(User,db.session))
 
 # Model saved with Keras model.save()
 MODEL_PATH = 'models/trained_model4.h5'
